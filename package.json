@@ -33,6 +33,7 @@
     "dist",
     "src/styles",
     "src/components/tablePrint/tablePrint.scss",
+    "docs",
     "README.md"
   ],
   "scripts": {

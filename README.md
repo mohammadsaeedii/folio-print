@@ -11,6 +11,18 @@
 | **React** | ≥ 18 |
 | **TypeScript** | First-class (bundled `.d.ts`) |
 
+<p align="center">
+  <img src="docs/print-preview.png" alt="folio-react print preview of an A4 invoice" width="860" />
+</p>
+
+<p align="center">
+  <img src="docs/api.png" alt="usePrintFromRef API — print, exportPdf, preview" width="860" />
+</p>
+
+<p align="center">
+  <img src="docs/print-table.png" alt="PrintTable with repeated headers and totals" width="860" />
+</p>
+
 ---
 
 ## Table of contents
@@ -392,6 +404,8 @@ See [Browser limitations](#browser-limitations) for honest caveats (rasterizatio
 
 ## Print preview
 
+![Print preview dialog](docs/print-preview.png)
+
 ```tsx
 const { preview, closePreview, isPreviewOpen, PrintableRoot, PreviewPortal } =
   usePrintFromRef({
@@ -709,6 +723,8 @@ const pageStyle = mergePrintPageStyle({
 ---
 
 ## PrintTable
+
+![PrintTable with repeated headers and totals](docs/print-table.png)
 
 ```tsx
 import { PrintTable } from "folio-react";
