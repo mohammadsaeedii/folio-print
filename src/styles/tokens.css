@@ -1,0 +1,28 @@
+/**
+ * Design tokens exposed as CSS custom properties.
+ * Consumers can override on `.print-doc` or `:root`.
+ */
+:root,
+.print-doc {
+  --print-ink: #111827;
+  --print-muted: #6b7280;
+  --print-faint: #8a8a8a;
+  --print-rule: #d1d5db;
+  --print-rule-strong: #111827;
+  --print-surface: #f8fafc;
+  --print-accent: #1a4c99;
+  --print-accent-soft: #eaf2ff;
+  --print-danger: #991b1b;
+  --print-paper: #ffffff;
+  --print-font-family: Arial, Helvetica, sans-serif;
+  --print-font-size: 12px;
+  --print-font-size-sm: 9px;
+  --print-font-size-xs: 8px;
+  --print-font-size-lg: 14px;
+  --print-font-size-xl: 18px;
+  --print-spacing: 12px;
+  --print-spacing-sm: 8px;
+  --print-border-width: 1px;
+  --print-border-width-lg: 2px;
+  --print-radius: 2px;
+}

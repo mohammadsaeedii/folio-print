@@ -1,0 +1,92 @@
+{
+  "name": "folio-react",
+  "version": "0.2.3",
+  "description": "React print / PDF toolkit: browser print, PDF export, preview, RTL, configurable pages, and printable document building blocks.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammadsaeedii/folio-print.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohammadsaeedii/folio-print/issues"
+  },
+  "homepage": "https://github.com/mohammadsaeedii/folio-print#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles/index.css",
+    "./styles": "./dist/styles/index.css",
+    "./styles/tokens.css": "./dist/styles/tokens.css",
+    "./styles/printTemplate.css": "./dist/styles/printTemplate.css",
+    "./styles/tablePrint.css": "./dist/styles/tablePrint.css",
+    "./styles/printPreview.css": "./dist/styles/printPreview.css",
+    "./styles/printTemplate.scss": "./src/styles/printTemplate.scss",
+    "./styles/tablePrint.scss": "./src/components/tablePrint/tablePrint.scss"
+  },
+  "files": [
+    "dist",
+    "src/styles",
+    "src/components/tablePrint/tablePrint.scss",
+    "README.md"
+  ],
+  "scripts": {
+    "build:css": "mkdir -p dist/styles && cp src/styles/tokens.css dist/styles/tokens.css && cp src/styles/printTemplate.css dist/styles/printTemplate.css && cp src/styles/tablePrint.css dist/styles/tablePrint.css && cp src/styles/printPreview.css dist/styles/printPreview.css && node -e \"const fs=require('fs'); const files=['tokens.css','printTemplate.css','tablePrint.css','printPreview.css']; const out=files.map(f=>fs.readFileSync('src/styles/'+f,'utf8').replace(/@import[^;]+;/g,'')).join('\\n'); fs.writeFileSync('dist/styles/index.css', out);\"",
+    "build:js": "tsup src/index.ts --format esm --dts --external react --external react-dom --external react-to-print --external html2canvas --external jspdf",
+    "build": "npm run build:js && npm run build:css",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "react-to-print": "^3"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "html2canvas": ">=1.4",
+    "jspdf": ">=2.5"
+  },
+  "peerDependenciesMeta": {
+    "html2canvas": {
+      "optional": true
+    },
+    "jspdf": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6",
+    "@testing-library/react": "^16",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "html2canvas": "^1.4.1",
+    "jsdom": "^26",
+    "jspdf": "^2.5.2",
+    "react": "^19",
+    "react-dom": "^19",
+    "tsup": "^8",
+    "typescript": "^5",
+    "vitest": "^3"
+  },
+  "keywords": [
+    "folio",
+    "folio-react",
+    "react",
+    "print",
+    "pdf",
+    "a4",
+    "rtl",
+    "preview",
+    "hook"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ]
+}

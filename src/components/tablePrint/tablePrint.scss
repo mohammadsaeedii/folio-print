@@ -1,0 +1,189 @@
+@import "../../styles/tokens.css";
+
+.print-layout--pdf .print-page-header,
+.print-layout--print .print-page-header,
+.print-layout--pdf .print-page-footer,
+.print-layout--print .print-page-footer {
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.print-layout--pdf #print-container,
+.print-layout--print #print-container {
+  padding: 24px;
+  font-family: var(--print-font-family);
+}
+
+.print-layout--pdf *,
+.print-layout--print * {
+  box-shadow: none !important;
+}
+
+.print-layout--pdf .print-page-header__inner,
+.print-layout--print .print-page-header__inner,
+.print-layout--pdf .print-page-footer__inner,
+.print-layout--print .print-page-footer__inner {
+  background: #fff !important;
+}
+
+.print-layout--pdf .print-chip--accent,
+.print-layout--print .print-chip--accent {
+  background: var(--print-accent-soft) !important;
+}
+
+.print-layout--pdf .print-card--emphasis .print-card__head,
+.print-layout--print .print-card--emphasis .print-card__head {
+  background: var(--print-ink) !important;
+  color: var(--print-paper) !important;
+}
+
+.print-table__meta {
+  margin: 0 0 12px;
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--print-accent);
+}
+
+.print-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.print-table__table thead {
+  display: table-header-group;
+}
+
+.print-table__table tfoot {
+  display: table-footer-group;
+}
+
+.print-table__table th,
+.print-table__table td {
+  padding: 6px 8px;
+  font-size: 9px;
+  text-align: start;
+  vertical-align: middle;
+  border: var(--print-border-width) solid var(--print-rule);
+  break-inside: avoid;
+  page-break-inside: avoid;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.print-table__table thead th {
+  font-weight: 700;
+  background: var(--print-surface);
+  color: var(--print-muted);
+}
+
+.print-table__section-row td {
+  font-weight: 700;
+  background: var(--print-accent-soft);
+  color: var(--print-accent);
+}
+
+.print-table__totals-row td,
+.print-table__summary-row td {
+  font-weight: 700;
+  background: var(--print-surface);
+  border-top: var(--print-border-width-lg) solid var(--print-rule-strong);
+}
+
+.print-table__cell--prewrap {
+  white-space: pre-wrap;
+}
+
+.print-table__cell--center {
+  text-align: center;
+}
+
+.print-table__cell--right {
+  text-align: end;
+}
+
+.print-table__row--allow-break {
+  break-inside: auto;
+  page-break-inside: auto;
+}
+
+.print-table__row--avoid-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.table-export-print__badge-group {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.table-export-print__badge-group .table-export-print__badge-cell {
+  display: block;
+  width: 100%;
+  margin-block: 2px;
+}
+
+.table-export-print__badge-cell {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.table-export-print__text-cell {
+  display: inline;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.table-export-print__table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.table-export-print__table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+.table-export-print-document-root .table-export-print__table th,
+.table-export-print-document-root .table-export-print__table td {
+  overflow: hidden;
+  vertical-align: middle;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.table-export-print__badge {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.table-export-print__badge-label {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 7px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
