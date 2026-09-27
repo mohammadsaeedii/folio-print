@@ -1,6 +1,6 @@
 {
   "name": "folio-react",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "React print / PDF toolkit: browser print, PDF export, preview, RTL, configurable pages, and printable document building blocks.",
   "license": "MIT",
   "repository": {
